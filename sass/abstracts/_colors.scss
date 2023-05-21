@@ -1,0 +1,25 @@
+$col-primary: #ccc;
+
+$col-primary-400: lighten($col-primary, 10%);
+$col-primary-500: $col-primary;
+$col-primary-600: darken($col-primary, 10%);
+
+$col-secondary: #2e647e;
+
+$col-secondary-400: lighten($col-secondary, 10%);
+$col-secondary-500: $col-secondary;
+$col-secondary-600: darken($col-secondary, 10%);
+
+:root {
+  --col-text: #191919;
+  --col-primary-400: #{$col-primary-400};
+  --col-primary-500: #{$col-primary-500};
+  --col-primary-600: #{$col-primary-600};
+}
+
+[data-theme="dark"] {
+  --col-text: #dedede;
+  --col-primary-400: #{$col-secondary-400};
+  --col-primary-500: #{$col-secondary-500};
+  --col-primary-600: #{$col-secondary-600};
+}
