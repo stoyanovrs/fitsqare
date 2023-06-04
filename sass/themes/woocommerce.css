@@ -1,0 +1,3 @@
+.woocommerce-checkout main .woocommerce {
+  max-width: var(--wp--style--global--wide-size) !important;
+}

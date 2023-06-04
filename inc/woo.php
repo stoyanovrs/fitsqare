@@ -17,13 +17,13 @@ function fitsquare_add_woocommerce_support() {
     // Change add to cart text on single product page
     add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_add_to_cart_button_text_single' ); 
     function woocommerce_add_to_cart_button_text_single() {
-        return __( 'Add to Cart Button Text', 'woocommerce' ); 
+        return __( 'Add to Cart', 'woocommerce' ); 
     }
 
     // Change add to cart text on product archives page
     add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_add_to_cart_button_text_archives' );  
     function woocommerce_add_to_cart_button_text_archives() {
-        return __( 'Add to Cart Button Text', 'woocommerce' );
+        return __( 'Add to Cart', 'woocommerce' );
     }
 
     // Remove specific (or all) of the product tabs
@@ -71,3 +71,9 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 	return ! empty( $free ) ? $free : $rates;
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
+
+
+function my_custom_cart_icon() {
+return '\f291';
+}
+add_filter( "woocommerce_cart_icon", 'my_custom_cart_icon' );

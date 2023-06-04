@@ -4,7 +4,7 @@ Author: Rumen Stoyanov
 Author URI: https://github.com/fitsquare
 Theme URI: https://github.com/fitsquare
 Tags: full-site-editing, block-patterns
-Text Domain: fit square
+Text Domain: zero
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.2
@@ -20,7 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --col-primary-600: #b3b3b3;
 }
 
-[data-theme="dark"] {
+[data-theme=dark] {
   --col-text: #dedede;
   --col-primary-400: #3c82a3;
   --col-primary-500: #2e647e;
@@ -42,7 +42,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -60,8 +60,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -80,7 +80,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -107,11 +107,14 @@ select {
   *::before,
   *::after {
     -webkit-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.woocommerce {
+  max-width: 100%;
 }
